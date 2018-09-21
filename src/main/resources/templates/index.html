@@ -131,18 +131,49 @@
                             <table class="table table-hover">
                                 <thead>
                                     <tr>
-                                        <th scope="col">Type</th>
-                                        <th scope="col">Column heading</th>
-                                        <th scope="col">Column heading</th>
-                                        <th scope="col">Column heading</th>
+                                        <th scope="col">
+                                            <div class="form-group mb-0">
+                                                <div class="form-check pl-0">
+                                                    <label class="form-check-label">
+                                                        <input class="form-check-input" type="checkbox" value="" disabled>
+                                                        <span>Full Name</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th scope="col">
+                                            <a class="column-header asc" href="#">
+                                                <div>Username</div>
+                                                <div class="sort-by"><i></i></div>
+                                            </a>
+                                        </th>
+                                        <th scope="col">
+                                            <a class="column-header desc" href="#">
+                                                <div>Email</div>
+                                                <div class="sort-by"><i></i></div>
+                                            </a>
+                                        </th>
+                                        <th scope="col">
+                                            <a class="column-header" href="#">
+                                                <div>Enabled</div>
+                                                <div class="sort-by"><i></i></div>
+                                            </a>
+                                        </th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr th:each="account : ${accounts}" class="table-active">
-                                        <th scope="row" th:text="${account.id}">Active</th>
-                                        <td th:text="${account.firstName + ' ' + account.lastName}">Column content</td>
+                                        <th scope="row">
+                                            <div class="form-check pl-0">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" th:value="${account.id}" checked>
+                                                    <span th:text="${account.firstName + ' ' + account.lastName}">Column content</span>
+                                                </label>
+                                            </div>
+                                        </th>
                                         <td th:text="${account.username}">Column content</td>
                                         <td th:text="${account.email}">Column content</td>
+                                        <td>Column content</td>
                                     </tr>
                                     <!--<tr>-->
                                         <!--<th scope="row">Default</th>-->
