@@ -6,6 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <title>Bportal</title>
         <link rel="stylesheet" th:href="@{/css/bootstrap.css}" media="screen" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
         <link rel="stylesheet" th:href="@{/css/custom.min.css}" media="screen" />
         <link rel="stylesheet" th:href="@{/css/bportal.css}" media="screen" />
     </head>
@@ -96,7 +97,7 @@
 
             <!-- Indicators
             ================================================== -->
-            <!-- <div class="bs-docs-section">
+            <div class="bs-docs-section">
               <div class="row">
                 <div class="col-lg-12">
                   <div class="bs-component">
@@ -108,7 +109,7 @@
                   </div>
                 </div>
               </div>
-            </div> -->
+            </div>
 
             <!-- Tables
             ================================================== -->
@@ -131,15 +132,20 @@
                             <table class="table table-hover">
                                 <thead>
                                     <tr>
-                                        <th scope="col">
+                                        <th scope="col" class="w-1r">
                                             <div class="form-group mb-0">
                                                 <div class="form-check pl-0">
                                                     <label class="form-check-label">
                                                         <input class="form-check-input" type="checkbox" value="" disabled>
-                                                        <span>Full Name</span>
                                                     </label>
                                                 </div>
                                             </div>
+                                        </th>
+                                        <th scope="col">
+                                            <a class="column-header" href="#">
+                                                <div>Full Name</div>
+                                                <div class="sort-by"><i></i></div>
+                                            </a>
                                         </th>
                                         <th scope="col">
                                             <a class="column-header asc" href="#">
@@ -155,8 +161,7 @@
                                         </th>
                                         <th scope="col">
                                             <a class="column-header" href="#">
-                                                <div>Enabled</div>
-                                                <div class="sort-by"><i></i></div>
+                                                <div>Action</div>
                                             </a>
                                         </th>
                                     </tr>
@@ -167,68 +172,17 @@
                                             <div class="form-check pl-0">
                                                 <label class="form-check-label">
                                                     <input class="form-check-input" type="checkbox" th:value="${account.id}" checked>
-                                                    <span th:text="${account.firstName + ' ' + account.lastName}">Column content</span>
                                                 </label>
                                             </div>
                                         </th>
+                                        <td th:text="${account.firstName + ' ' + account.lastName}">Column content</td>
                                         <td th:text="${account.username}">Column content</td>
                                         <td th:text="${account.email}">Column content</td>
-                                        <td>Column content</td>
+                                        <td>
+                                            <i class="far fa-edit"></i>
+                                            <i class="far fa-trash-alt"></i>
+                                        </td>
                                     </tr>
-                                    <!--<tr>-->
-                                        <!--<th scope="row">Default</th>-->
-                                        <!--<td>Column content</td>-->
-                                        <!--<td>Column content</td>-->
-                                        <!--<td>Column content</td>-->
-                                    <!--</tr>-->
-                                    <!--<tr class="table-primary">-->
-                                        <!--<th scope="row">Primary</th>-->
-                                        <!--<td>Column content</td>-->
-                                        <!--<td>Column content</td>-->
-                                        <!--<td>Column content</td>-->
-                                    <!--</tr>-->
-                                    <!--<tr class="table-secondary">-->
-                                        <!--<th scope="row">Secondary</th>-->
-                                        <!--<td>Column content</td>-->
-                                        <!--<td>Column content</td>-->
-                                        <!--<td>Column content</td>-->
-                                    <!--</tr>-->
-                                    <!--<tr class="table-success">-->
-                                        <!--<th scope="row">Success</th>-->
-                                        <!--<td>Column content</td>-->
-                                        <!--<td>Column content</td>-->
-                                        <!--<td>Column content</td>-->
-                                    <!--</tr>-->
-                                    <!--<tr class="table-danger">-->
-                                        <!--<th scope="row">Danger</th>-->
-                                        <!--<td>Column content</td>-->
-                                        <!--<td>Column content</td>-->
-                                        <!--<td>Column content</td>-->
-                                    <!--</tr>-->
-                                    <!--<tr class="table-warning">-->
-                                        <!--<th scope="row">Warning</th>-->
-                                        <!--<td>Column content</td>-->
-                                        <!--<td>Column content</td>-->
-                                        <!--<td>Column content</td>-->
-                                    <!--</tr>-->
-                                    <!--<tr class="table-info">-->
-                                        <!--<th scope="row">Info</th>-->
-                                        <!--<td>Column content</td>-->
-                                        <!--<td>Column content</td>-->
-                                        <!--<td>Column content</td>-->
-                                    <!--</tr>-->
-                                    <!--<tr class="table-light">-->
-                                        <!--<th scope="row">Light</th>-->
-                                        <!--<td>Column content</td>-->
-                                        <!--<td>Column content</td>-->
-                                        <!--<td>Column content</td>-->
-                                    <!--</tr>-->
-                                    <!--<tr class="table-dark">-->
-                                        <!--<th scope="row">Dark</th>-->
-                                        <!--<td>Column content</td>-->
-                                        <!--<td>Column content</td>-->
-                                        <!--<td>Column content</td>-->
-                                    <!--</tr>-->
                                 </tbody>
                             </table>
                         </div>

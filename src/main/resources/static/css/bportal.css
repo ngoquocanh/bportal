@@ -45,3 +45,6 @@ div.sort-by i:after {
 .column-header.desc div.sort-by i:before {
     visibility: hidden;
 }
+.w-1r {
+    width: 1rem;
+}
