@@ -1,0 +1,50 @@
+.bs-docs-section {
+    margin-top: 1rem;
+}
+a.column-header {
+    text-decoration: none;
+}
+.column-header {
+    display: flex;
+}
+div.sort-by {
+    display: flex;
+    align-items: center;
+}
+div.sort-by i {
+    position: relative;
+    padding-right: 1rem;
+    bottom: 0.46rem;
+}
+div.sort-by i:before,
+div.sort-by i:after {
+    border: 0.25rem solid transparent;
+    content: '';
+    display: block;
+    height: 0;
+    position: absolute;
+    right: 0;
+    top: -0.25rem;
+    width: 0;
+}
+div.sort-by i:before {
+    border-bottom-color: #333;
+    margin-top: 0;
+}
+div.sort-by i:after {
+    border-top-color: #333;
+    margin-top: 0.625rem;
+}
+.column-header:hover div.sort-by i:after {
+    border-top-color: #0d0d0d;
+    margin-top: 0.625rem;
+}
+.column-header.asc div.sort-by i:after {
+    visibility: hidden;
+}
+.column-header.desc div.sort-by i:before {
+    visibility: hidden;
+}
+.w-1r {
+    width: 1rem;
+}
